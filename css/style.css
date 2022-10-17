@@ -33,7 +33,7 @@
     grid-template-columns: repeat(8, 1fr);
     align-items: center;
     height: 210px;
-    z-index: 10;
+    z-index: 1;
 
 }
 
@@ -74,7 +74,6 @@
 
 
 @media (max-width:960px) {
-
 
     .navBar {
         height: 210px;
@@ -706,7 +705,7 @@ span {
     grid-template-areas:
         "at-1 at-1 at-1"
         "im-1 . im-2"
-        "at-2 at-2 at-2";
+        ". at-2 at-2";
 }
 
 .acercaTexto-1 {
