@@ -1,0 +1,781 @@
+/*----Solo usar para @import*/
+@import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@100;500&family=Poppins:wght@100;300;500&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box; }
+
+/*Acerca de*/
+.conteiner {
+  background-color: #CA6702; }
+
+.conteiner1 {
+  background-color: #7261aac7; }
+
+/*-------FLOTANTE-------*/
+.flotante {
+  position: fixed;
+  right: 2%;
+  bottom: 18%;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-image: url(../img/fondos/lentecita.jpg);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 46px 36px 44px 6px rgba(0, 0, 0, 0.93);
+  -webkit-box-shadow: 46px 36px 44px 6px rgba(0, 0, 0, 0.93);
+  -moz-box-shadow: 46px 36px 44px 6px rgba(0, 0, 0, 0.93);
+  z-index: 2; }
+  .flotante a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    color: #CA6702;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 20px; }
+
+.navBar {
+  background-color: #ecc536;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  align-items: center;
+  height: 210px;
+  z-index: 1; }
+  .navBar .logo {
+    width: 190px;
+    height: 190px;
+    margin-left: 20px; }
+    .navBar .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .navBar #check {
+    display: none; }
+  .navBar .btn-menu {
+    display: none; }
+  .navBar .nav-menu {
+    grid-column: 3 / 8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 210px;
+    top: 0;
+    text-align: right;
+    margin-right: 50px; }
+    .navBar .nav-menu li {
+      list-style: none; }
+      .navBar .nav-menu li a {
+        font-size: 25px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #181818; }
+        .navBar .nav-menu li a:active {
+          color: red;
+          transition: all 0.3s; }
+        .navBar .nav-menu li a:hover {
+          color: red;
+          transition: all 0.3s; }
+
+/*--------MAIN FOOTER--------*/
+.pie {
+  display: grid;
+  width: 100%;
+  height: 150px;
+  align-items: center;
+  background-color: #181818;
+  grid-template-areas: "logo-footer copyright redes "; }
+  .pie .logo-footer {
+    width: 200px;
+    height: 160px;
+    padding-bottom: 10px;
+    grid-template-areas: logo-footer;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    width: 200px;
+    height: 160px;
+    color: #181818;
+    padding-left: 30%; }
+  .pie .copyright {
+    grid-template-areas: copyrigth;
+    text-align: center;
+    color: white; }
+    .pie .copyright p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;
+      color: white;
+      text-align: center;
+      padding-top: 40px; }
+  .pie .redes {
+    grid-template-areas: redes;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20%;
+    margin-right: 40px; }
+    .pie .redes .twitter {
+      transition: all 0.8s ease-in-out; }
+      .pie .redes .twitter:hover {
+        transform: rotateY(360deg); }
+    .pie .redes .instagram {
+      transition: all 0.8s ease-in-out; }
+      .pie .redes .instagram:hover {
+        transform: rotateY(360deg); }
+    .pie .redes .whatsapp {
+      transition: all 0.8s ease-in-out; }
+      .pie .redes .whatsapp:hover {
+        transform: rotateY(360deg); }
+    .pie .redes .linkedin {
+      transition: all 0.8s ease-in-out; }
+      .pie .redes .linkedin:hover {
+        transform: rotateY(360deg); }
+
+/*-------Header-------*/
+@media (max-width: 960px) {
+  .navBar {
+    height: 210px;
+    top: 0;
+    align-items: center; }
+    .navBar .nav-menu {
+      display: inline-block;
+      position: fixed;
+      width: 100%;
+      height: 0vh;
+      top: 210px;
+      background: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      transition: all 0.5s;
+      z-index: 2;
+      overflow: hidden; }
+      .navBar .nav-menu li {
+        list-style: none;
+        line-height: 100px;
+        margin: 0 20px;
+        transition: none;
+        line-height: 30px;
+        margin: 50px 0;
+        transition: all 0.3s; }
+        .navBar .nav-menu li a {
+          color: #fff;
+          font-size: 30px;
+          text-transform: uppercase;
+          font-weight: 500; }
+      .navBar .nav-menu #check:checked ~ .nav-menu li {
+        display: block; }
+    .navBar #check:checked ~ .nav-menu {
+      height: 100vh;
+      top: 210px; }
+    .navBar .btn-menu {
+      display: flex;
+      font-size: 25px;
+      color: #fff;
+      margin-right: 20px;
+      cursor: pointer;
+      grid-column: 8 / 9; } }
+
+/*-----Galeria-------*/
+@media (max-width: 1290px) {
+  .galeria {
+    grid-template-rows: repeat(4, 250px);
+    height: auto; }
+  .galeria div {
+    grid-column: 1 / 5;
+    height: 250px;
+    padding: 20px;
+    margin: 10px;
+    z-index: 1; }
+  .galeria div img {
+    height: 100%; } }
+
+/*----Galvez-----*/
+@media (max-width: 780px) {
+  .fotosGalvez {
+    grid-template-columns: repeat(2, 1fr); }
+  .galvezItem:nth-child(12) {
+    grid-column-start: span 2; } }
+
+@media (max-width: 570px) {
+  .fotosGalvez {
+    grid-template-columns: 1fr;
+    display: inline-block;
+    width: 100%;
+    margin: auto; } }
+
+/*-----Pista------*/
+@media (max-width: 780px) {
+  .fotosPista {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px; } }
+
+@media (max-width: 570px) {
+  .fotosPista {
+    display: grid;
+    grid-template-columns: 1fr;
+    display: inline-block;
+    width: 100%;
+    margin: auto; } }
+
+/*-------Personalizadas-------*/
+@media (max-width: 780px) {
+  .fotosPersonalizadas {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px; }
+  .personItem:nth-child(12) {
+    grid-column-start: span 2; } }
+
+@media (max-width: 570px) {
+  .fotosPersonalizadas {
+    grid-template-columns: 1fr;
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+    grid-auto-flow: dense; } }
+
+/*------Eventos-----*/
+@media (max-width: 780px) {
+  .fotosEventos {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px; }
+  .eventosItem:nth-child(1) {
+    grid-column-start: span 2; }
+  .eventosItem:nth-child(9) {
+    grid-column-start: span 2; } }
+
+@media (max-width: 570px) {
+  .fotosEventos {
+    grid-template-columns: 1fr;
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+    grid-gap: 2px; } }
+
+/*-------Acercade-------*/
+@media (max-width: 1240px) {
+  .contenedor {
+    height: auto; }
+  .camara {
+    display: block;
+    justify-content: center; }
+    .camara img {
+      width: 80vw;
+      display: flex;
+      align-content: flex-start;
+      height: 100%; }
+    .camara p {
+      width: 80vw;
+      display: flex;
+      align-content: flex-end;
+      font-size: 30px;
+      font-weight: 500; } }
+
+@media (max-width: 600px) {
+  .camara p {
+    font-size: 20px;
+    font-weight: 300; }
+  .camara img {
+    width: 300px;
+    height: 300px; } }
+
+@media (max-width: 400px) {
+  .camara div {
+    margin: 0; }
+  .camara img {
+    width: 80vw;
+    height: 250px; } }
+
+@media (max-width: 1240px) {
+  .heroacerca {
+    height: auto; }
+  .descripcion {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "at-1 at-1" "im-1 im-1" "at-2 at-2" "im-2 im-2"; }
+    .descripcion img {
+      width: 90%;
+      padding-left: 40px; } }
+
+@media (max-width: 400px) {
+  .descripcion p {
+    font-size: medium;
+    font-weight: 200; } }
+
+@media (max-width: 1240px) {
+  .canal {
+    height: auto; }
+    .canal h2 {
+      display: flex;
+      justify-content: center;
+      font-size: 50px;
+      padding: 0; }
+    .canal .youtube {
+      display: inline-block;
+      align-content: center; }
+      .canal .youtube .video {
+        justify-content: center; }
+        .canal .youtube .video iframe {
+          width: 60vw;
+          margin: 0 0 10px 50px; }
+      .canal .youtube .parrafo {
+        font-size: 30px;
+        font-weight: 500; } }
+
+@media (max-width: 768px) {
+  .parrafo {
+    display: none; } }
+
+@media (max-width: 400px) {
+  .canal h2 {
+    display: none; }
+  .canal .youtube {
+    height: 200px; }
+    .canal .youtube .video {
+      display: none; }
+    .canal .youtube .url {
+      display: block;
+      list-style: none; }
+      .canal .youtube .url a {
+        text-decoration: none; }
+      .canal .youtube .url h3 {
+        font-size: 50px;
+        color: #a10606;
+        padding: 25px; } }
+
+/*-------Contacto------*/
+@media (max-width: 1200px) {
+  .formulario h2 {
+    grid-column: 1 / 7;
+    grid-row: 1 / 2;
+    padding-left: 30px; }
+  .formulario p {
+    grid-column: 1 / 7;
+    grid-row: 2 / 3; }
+  .formulario div.form {
+    grid-column: 2 / 6;
+    grid-row: 3 / 5; }
+  .formulario div.ubicacion {
+    grid-column: 2 / 6;
+    grid-row: 5 / 7;
+    width: auto; } }
+
+@media (max-width: 800px) {
+  .formulario h2 {
+    font-size: 35px; }
+  .formulario p {
+    font-size: 30px;
+    font-weight: 300; } }
+
+@media (max-width: 650px) {
+  .formulario div.ubicacion .mapa {
+    width: auto;
+    height: 200px; }
+  .formulario div.form {
+    width: 90vw; } }
+
+@media (max-width: 500px) {
+  .formulario h2 {
+    font-size: 30px;
+    font-weight: 300; }
+  .formulario p {
+    font-size: larger;
+    font-weight: 200; }
+  .formulario div .form {
+    width: auto; }
+  .formulario div .ubicacion .mapa {
+    width: auto;
+    height: 200px; } }
+
+/*---------Footer----------*/
+@media (max-width: 1290px) {
+  .pie {
+    grid-template-areas: "logo-footer redes"; }
+    .pie .copyright {
+      display: none; }
+    .pie .redes {
+      margin: 20px; } }
+
+@media (max-width: 710px) {
+  .pie .logo-footer {
+    display: none; }
+  .pie .redes {
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding-left: 0; } }
+
+/*------MAIN------*/
+.carrusel .carousel-item img {
+  width: 100%;
+  height: 100vh;
+  border: 4px solid;
+  border-color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: auto 250px; }
+
+.carrusel .carousel-item h5 {
+  font-size: 40px;
+  font-weight: 500;
+  text-transform: uppercase; }
+  .carrusel .carousel-item h5 span {
+    font-size: 50px;
+    font-weight: 900;
+    font-style: italic;
+    color: #FFFFFF;
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+    color: #FFFFFF; }
+
+.carrusel .carousel-item p {
+  font-size: 30px;
+  font-weight: 400; }
+
+/*--------MAIN--------*/
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px 10px 20px;
+  background-color: #0e4f6b;
+  box-sizing: border-box; }
+  .galeria h2 {
+    color: #FEFAE0;
+    font-size: 30px; }
+  .galeria img {
+    width: 100%;
+    height: 100vh;
+    border-radius: 20px;
+    box-shadow: 46px 36px 44px 6px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 46px 36px 44px 6px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 46px 36px 44px 6px black;
+    margin-bottom: 25px;
+    object-fit: cover; }
+    .galeria img:hover {
+      border: #63b9de solid 3px;
+      transition: all 0.5s; }
+
+/*------MAIN------*/
+.formulario {
+  background-image: url(../img/fondos/lente1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, auto); }
+  .formulario h2 {
+    grid-column: 1 / 6;
+    font-size: 50px;
+    color: ghostwhite; }
+  .formulario p {
+    grid-column: 1 / 5;
+    grid-row: 2 / 3;
+    align-items: center;
+    padding: 30px 0 50px 0;
+    font-size: 30px;
+    font-stretch: expanded;
+    color: white;
+    font-weight: 400;
+    margin: 0 50px 0 50px; }
+  .formulario .ubicacion {
+    grid-column: 1 / 5;
+    grid-row: 3 / 5;
+    color: azure;
+    margin: 50px;
+    font-size: 25px; }
+    .formulario .ubicacion .mapa {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      height: 300px;
+      box-shadow: 46px 36px 44px 6px rgba(0, 0, 0, 0.93);
+      -webkit-box-shadow: 46px 36px 44px 6px rgba(0, 0, 0, 0.93);
+      -moz-box-shadow: 46px 36px 44px 6px rgba(0, 0, 0, 0.93); }
+  .formulario .form {
+    grid-column: 5 / 7;
+    grid-row: 2 / 4;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin-top: 50px;
+    box-sizing: border-box;
+    padding: 0 10px 20px 10px;
+    border: white solid 3px;
+    border-radius: 16px;
+    background-color: rgba(124, 86, 86, 0.247); }
+    .formulario .form form input {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 5px;
+      box-sizing: border-box; }
+    .formulario .form form textarea {
+      max-height: 200px;
+      min-height: 138px;
+      max-width: 574px;
+      min-width: 100%; }
+
+/*------MAIN ACERCA DE------*/
+.contenedor {
+  background-image: url(../img/fondos/fondonegro2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: auto; }
+  .contenedor .camara {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
+    grid-template-areas: "miTitulo . ." "equip-1 equip-2 equip-3" "parra-1 parra-2 parra-3"; }
+    .contenedor .camara div {
+      width: 300px;
+      height: 300px;
+      display: block;
+      align-content: center;
+      margin-left: 75px; }
+      .contenedor .camara div h2 {
+        font-size: 40px;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 15px 0 0 20px; }
+      .contenedor .camara div p {
+        font-size: 25px;
+        font-weight: 400;
+        color: white; }
+      .contenedor .camara div img {
+        width: 100%;
+        height: 80%;
+        border-radius: 20px;
+        box-shadow: 46px 36px 44px 6px rgba(0, 0, 0, 0.93);
+        -webkit-box-shadow: 46px 36px 44px 6px rgba(0, 0, 0, 0.93);
+        -moz-box-shadow: 46px 36px 44px 6px rgba(0, 0, 0, 0.93); }
+    .contenedor .camara .miEquipo-1 {
+      grid-area: equip-1; }
+    .contenedor .camara .miEquipo-2 {
+      grid-area: equip-2; }
+    .contenedor .camara .miEquipo-3 {
+      grid-area: equip-3; }
+    .contenedor .camara .miParrafo-1 {
+      grid-area: parra-1; }
+    .contenedor .camara .miParrafo-2 {
+      grid-area: parra-2; }
+    .contenedor .camara .miParrafo-3 {
+      grid-area: parra-3; }
+
+.heroacerca {
+  background-image: url(../img/cars/ferrari.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: calc(100vh 236px); }
+  .heroacerca .descripcion {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas: "at-1 at-1 at-1" "im-1 . im-2" ". at-2 at-2"; }
+    .heroacerca .descripcion p {
+      color: azure;
+      font-size: 25px;
+      font-weight: 600;
+      padding-left: 25px; }
+    .heroacerca .descripcion img {
+      width: 400px;
+      height: 400px; }
+  .heroacerca .acercaTexto-1 {
+    grid-area: at-1; }
+  .heroacerca .acercaImg-1 {
+    grid-area: im-1; }
+  .heroacerca .acercaTexto-2 {
+    grid-area: at-2; }
+  .heroacerca .acercaImg-2 {
+    grid-area: im-2; }
+
+.canal {
+  background-image: url(../img/fondos/fondonegro.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 750px; }
+  .canal h2 {
+    font-size: 70px;
+    color: #a10606;
+    padding: 25px; }
+  .canal .youtube {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .canal .youtube .parrafo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+      color: aliceblue;
+      font-size: 40px; }
+    .canal .youtube .video {
+      display: flex;
+      align-items: center;
+      padding-right: 100px;
+      padding-top: 50px; }
+      .canal .youtube .video iframe {
+        width: 700px;
+        height: 500px; }
+    .canal .youtube .url {
+      display: none; }
+
+/*------MAIN SHOP------*/
+#galeria .text-center h2 {
+  color: #232227;
+  font-size: 40px;
+  font-weight: 700; }
+
+#galeria .text-center p {
+  color: #181818;
+  font-size: 25px;
+  font-weight: 400; }
+
+#galeria .row .col-lg-4 {
+  padding: 15px; }
+  #galeria .row .col-lg-4 img {
+    object-fit: cover;
+    width: 100%;
+    height: 350px;
+    border: #232227 solid 3px;
+    border-radius: 10px;
+    box-shadow: 46px 36px 44px 6px rgba(0, 0, 0, 0.93);
+    -webkit-box-shadow: 46px 36px 44px 6px rgba(0, 0, 0, 0.93);
+    -moz-box-shadow: 46px 36px 44px 6px rgba(0, 0, 0, 0.93); }
+    #galeria .row .col-lg-4 img:hover {
+      width: 103%;
+      height: 380px;
+      transition: all 0.3s ease-in-out;
+      border-radius: 40px; }
+
+/*------MAIN-------*/
+.fotosGalvez {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 350px;
+  padding: 10px;
+  row-gap: 15px;
+  column-gap: 10px; }
+  .fotosGalvez .galvezItem {
+    position: relative; }
+    .fotosGalvez .galvezItem .galvezImg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+    .fotosGalvez .galvezItem .galvezTitulo {
+      position: absolute;
+      bottom: 0;
+      color: white;
+      background: linear-gradient(rgba(255, 255, 255, 0), black);
+      width: 100%;
+      margin: 0;
+      padding: 10px;
+      text-align: center; }
+    .fotosGalvez .galvezItem:nth-child(5) {
+      grid-column-start: span 2; }
+    .fotosGalvez .galvezItem:nth-child(10) {
+      grid-row-start: span 2; }
+    .fotosGalvez .galvezItem:nth-child(11) {
+      grid-row-start: span 2; }
+
+/*-----MAIN PISTA-----*/
+.fotosPista {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 350px;
+  padding: 10px;
+  row-gap: 15px;
+  column-gap: 10px; }
+  .fotosPista .pistaItem {
+    position: relative; }
+    .fotosPista .pistaItem .pistaImg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+    .fotosPista .pistaItem .pistaTitulo {
+      position: absolute;
+      bottom: 0;
+      color: white;
+      background: linear-gradient(rgba(255, 255, 255, 0), black);
+      width: 100%;
+      margin: 0;
+      padding: 10px;
+      text-align: center; }
+    .fotosPista .pistaItem:nth-child(3) {
+      grid-row-start: span 2; }
+    .fotosPista .pistaItem:nth-child(6) {
+      grid-row-start: span 2; }
+    .fotosPista .pistaItem:nth-child(9) {
+      grid-column-start: span 2; }
+
+/*-----MAIN PERSONALIZADAS-----*/
+.fotosPersonalizadas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 350px;
+  padding: 12px;
+  column-gap: 12px;
+  row-gap: 16px; }
+  .fotosPersonalizadas .personItem {
+    position: relative; }
+    .fotosPersonalizadas .personItem .personImg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+    .fotosPersonalizadas .personItem .personTitulo {
+      position: absolute;
+      bottom: 0;
+      color: white;
+      background: linear-gradient(rgba(255, 255, 255, 0), black);
+      width: 100%;
+      margin: 0;
+      padding: 10px;
+      text-align: center; }
+    .fotosPersonalizadas .personItem:nth-child(1) {
+      grid-row-start: span 2; }
+    .fotosPersonalizadas .personItem:nth-child(7) {
+      grid-row-start: span 2; }
+    .fotosPersonalizadas .personItem:nth-child(11) {
+      grid-column-start: span 2;
+      grid-row-start: span 2; }
+    .fotosPersonalizadas .personItem:nth-child(12) {
+      grid-row-start: span 2; }
+
+/*-----MAIN EVENTOS-----*/
+.fotosEventos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 350px;
+  padding: 12px;
+  column-gap: 12px;
+  row-gap: 16px; }
+  .fotosEventos .eventosItem {
+    position: relative; }
+    .fotosEventos .eventosItem .eventosImg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+    .fotosEventos .eventosItem .eventosTitulos {
+      position: absolute;
+      bottom: 0;
+      color: white;
+      background: linear-gradient(rgba(255, 255, 255, 0), black);
+      width: 100%;
+      margin: 0;
+      padding: 10px;
+      text-align: center; }
+    .fotosEventos .eventosItem:nth-child(2) {
+      grid-row-start: span 2; }
+    .fotosEventos .eventosItem:nth-child(5) {
+      grid-row-start: span 2; }
+    .fotosEventos .eventosItem:nth-child(6) {
+      grid-row-start: span 2; }

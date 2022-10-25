@@ -1,0 +1,41 @@
+/*------MAIN SHOP------*/
+#galeria {
+    .text-center {
+        h2 {
+            color: #232227;
+            font-size: 40px;
+            font-weight: 700;
+        }
+
+        p {
+            color: #181818;
+            font-size: 25px;
+            font-weight: 400;
+        }
+    }
+
+    .row {
+        .col-lg-4 {
+            padding: 15px;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 350px;
+                border: #232227 solid 3px;
+                border-radius: 10px;
+                box-shadow: 46px 36px 44px 6px rgba(0, 0, 0, 0.93);
+                -webkit-box-shadow: 46px 36px 44px 6px rgba(0, 0, 0, 0.93);
+                -moz-box-shadow: 46px 36px 44px 6px rgba(0, 0, 0, 0.93);
+                &:hover {
+                    width: 103%;
+                    height: 380px;
+                    transition: all 0.3s ease-in-out;
+                    border-radius: 40px;
+                }
+            }
+        }
+    }
+
+
+}

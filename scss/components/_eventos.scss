@@ -1,0 +1,38 @@
+/*-----MAIN EVENTOS-----*/
+
+.fotosEventos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 350px;
+    padding: 12px;
+    column-gap: 12px;
+    row-gap: 16px;
+    .eventosItem {
+        position: relative;
+        .eventosImg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .eventosTitulos {
+            position: absolute;
+            bottom: 0;
+            color: white;
+            background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+            width: 100%;
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+        }
+        &:nth-child(2) {
+            grid-row-start: span 2;
+        }
+        &:nth-child(5) {
+            grid-row-start: span 2;
+        }
+        &:nth-child(6) {
+            grid-row-start: span 2;
+        }
+    }
+    
+}
