@@ -1,4 +1,6 @@
-/*--------MAIN--------*/
+@import "../base/variables";
+
+/*--------MAIN GALERIA--------*/
 .galeria {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -9,8 +11,8 @@
     box-sizing: border-box;
 
     h2 {
-        color: #FEFAE0;
-        font-size: 30px;
+        color: nth($colores2, 4 );
+        font-size: nth($font-size, 3 );
     }
 
     img {

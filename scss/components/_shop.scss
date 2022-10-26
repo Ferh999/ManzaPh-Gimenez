@@ -1,15 +1,17 @@
+@import "../base/variables";
+
 /*------MAIN SHOP------*/
 #galeria {
     .text-center {
         h2 {
-            color: #232227;
-            font-size: 40px;
+            color: nth($colores2, 8);
+            font-size: nth($font-size, 4);
             font-weight: 700;
         }
 
         p {
-            color: #181818;
-            font-size: 25px;
+            color: nth($colores2, 8);
+            font-size: nth($font-size, 2);
             font-weight: 400;
         }
     }
