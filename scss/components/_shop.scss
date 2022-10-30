@@ -26,9 +26,7 @@
                 height: 350px;
                 border: #232227 solid 3px;
                 border-radius: 10px;
-                box-shadow: 46px 36px 44px 6px rgba(0, 0, 0, 0.93);
-                -webkit-box-shadow: 46px 36px 44px 6px rgba(0, 0, 0, 0.93);
-                -moz-box-shadow: 46px 36px 44px 6px rgba(0, 0, 0, 0.93);
+                @extend %sombreado;
                 &:hover {
                     width: 103%;
                     height: 380px;

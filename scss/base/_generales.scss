@@ -5,13 +5,16 @@
     padding: 0%;
     box-sizing: border-box;
 }
-/*Acerca de*/
+
+@import "./variables"; 
+
+/*SHOP*/
 .conteiner {
-    background-color: #CA6702;
+    background-color: nth($colores1, 4 );
 }
 
 .conteiner1 {
-    background-color: #7261aac7;
+    background-color: nth($colores2, 2 );
 }
 
 

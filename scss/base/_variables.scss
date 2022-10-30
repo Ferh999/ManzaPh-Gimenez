@@ -9,18 +9,19 @@ $colores1:
 rgba(0, 0, 0, 0.8),
 #FFFFFF,
 rgb(161, 6, 6),
-#181818;
+#191a1df4;
 
 $colores2:
-#01161E,
-#124559,
+#01161ecc,
+#033c53,
 #598392,
 #f7f7f2,
-#e4e6c3,
+#f3edf6,
 #899878,
 #222725,
 #121113,
-red;
+red,
+rgba(124, 86, 86, 0.247);
 
 $font_size:
 20px,
@@ -30,5 +31,43 @@ $font_size:
 50px,
 70px;
 
-/*MAPAS*/
 
+/*MAPAS*/
+$boton:(
+    bg: #01161ecc,
+    borde: 2px solid black,
+    color-tex: #FFFFFF
+);
+
+/*EXTENDS*/
+%backgrounds {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+%flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+%sombreado {
+    box-shadow: 46px 36px 44px 6px rgba(0, 0, 0, 0.93);
+                -webkit-box-shadow: 46px 36px 44px 6px rgba(0, 0, 0, 0.93);
+                -moz-box-shadow: 46px 36px 44px 6px rgba(0, 0, 0, 0.93);
+}
+
+/*MIXIN*/
+
+@mixin flex ($flex, $justify, $align) {
+    display: $flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin grid ($grid, $column, $row) {
+    display: $grid;
+    grid-template-columns: $column;
+    grid-template-rows: $row;
+}

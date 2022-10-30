@@ -3,20 +3,23 @@
 /*------MAIN ACERCA DE------*/
 .contenedor {
     background-image: url(../img/fondos/fondonegro2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    @extend %backgrounds;
     width: 100%;
     height: auto;
 
     .camara {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 0.5fr 1fr 1fr;
+        @include grid (grid, 1fr 1fr 1fr, 0.5fr 1fr 1fr);
         grid-template-areas:
             "miTitulo . ."
             "equip-1 equip-2 equip-3"
             "parra-1 parra-2 parra-3";
+
+        h2 {
+            font-size: nth($font-size, 4);
+            text-transform: uppercase;
+            color: nth($colores1, 8);
+            padding: 15px 0 0 20px;
+        }
 
         div {
             width: 300px;
@@ -25,26 +28,18 @@
             align-content: center;
             margin-left: 75px;
 
-            h2 {
-                font-size: nth($font-size, 4 );
-                text-transform: uppercase;
-                color: nth($colores1, 8 );
-                padding: 15px 0 0 20px;
-            }
 
             p {
-                font-size: nth($font-size, 2 );
+                font-size: nth($font-size, 2);
                 font-weight: 400;
-                color: nth($colores1, 8 );
+                color: nth($colores1, 8);
             }
 
             img {
                 width: 100%;
                 height: 80%;
                 border-radius: 20px;
-                box-shadow: 46px 36px 44px 6px rgba(0, 0, 0, 0.93);
-                -webkit-box-shadow: 46px 36px 44px 6px rgba(0, 0, 0, 0.93);
-                -moz-box-shadow: 46px 36px 44px 6px rgba(0, 0, 0, 0.93);
+                @extend %sombreado;
             }
         }
 
@@ -81,24 +76,20 @@
 
     background-image: url(../img/cars/ferrari.jpg);
     background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    @extend %backgrounds;
     width: 100%;
     height: calc(100vh 236px);
 
     .descripcion {
-        display: grid;
-        grid-template-columns: 2fr 1fr 2fr;
-        grid-template-rows: 1fr 3fr 1fr;
+        @include grid (grid, 2fr 1fr 2fr, 1fr 3fr 1fr);
         grid-template-areas:
             "at-1 at-1 at-1"
             "im-1 . im-2"
             ". at-2 at-2";
 
         p {
-            color: nth($colores2, 5 );
-            font-size: nth($font-size, 2 );
+            color: nth($colores2, 5);
+            font-size: nth($font-size, 2);
             font-weight: 600;
             padding-left: 25px;
         }
@@ -128,38 +119,40 @@
 
 .canal {
     background-image: url(../img/fondos/fondonegro.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    @extend %backgrounds;
     width: 100vw;
     height: 750px;
+
     h2 {
-        font-size: nth($font-size, 6 );
-        color: nth($colores1, 9 );
+        font-size: nth($font-size, 6);
+        color: nth($colores1, 9);
         padding: 25px;
     }
+
     .youtube {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex (flex, space-between, center);
+        
+
         .parrafo {
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 40px;
-            color: aliceblue;
-            font-size: nth($font-size, 4 );
+            color: nth($colores1, 8);
+            font-size: nth($font-size, 4);
         }
+
         .video {
-            display: flex;
-            align-items: center;
+            @include flex (flex, center, center);
             padding-right: 100px;
             padding-top: 50px;
+
             iframe {
                 width: 700px;
                 height: 500px;
             }
         }
+
         .url {
             display: none;
         }

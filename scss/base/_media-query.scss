@@ -28,30 +28,70 @@
                 transition: all 0.3s;
 
                 a {
-                    color: #fff;
+                    color: nth($colores1, 8);
                     font-size: 30px;
                     text-transform: uppercase;
                     font-weight: 500;
+
+                    &:active {
+                        color: nth($colores2, 9);
+                        transition: all 0.3s;
+                    }
+
+                    &:hover {
+                        color: nth($colores2, 9);
+                        transition: all 0.3s;
+                    }
                 }
             }
 
-            #check:checked~.nav-menu li {
+            #btn-menu:checked~.nav-menu li {
                 display: block;
             }
         }
 
-        #check:checked~.nav-menu {
+        #btn-menu:checked~.nav-menu {
             height: 100vh;
             top: 210px;
         }
 
-        .btn-menu {
-            display: flex;
-            font-size: 25px;
-            color: #fff;
+        .lbl-menu {
+            display: block;
+            color: nth($colores1, 8);
+            width: 50px;
+            height: 50px;
             margin-right: 20px;
             cursor: pointer;
             grid-column: 8 / 9;
+        }
+
+        #btn-menu:checked~.lbl-menu .spn1 {
+            transform: rotate(45deg) translate(-2px, 1px);
+        }
+
+        #btn-menu:checked~.lbl-menu .spn2 {
+            opacity: 0;
+            margin-left: -30px;
+        }
+
+        #btn-menu:checked~.lbl-menu .spn3 {
+            transform: rotate(-45deg) translate(-4px, 2px);
+        }
+
+        span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: nth($colores2, 6 );
+            margin-top: 12px;
+            transform-origin: 0px 100%;
+            transition: all 0.3s;
+
+            #btn-menu {
+                display: none;
+
+            }
+
         }
     }
 }
@@ -172,83 +212,101 @@
 @media (max-width:1240px) {
     .contenedor {
         height: auto;
-    }
 
-    .camara {
-        display: block;
-        justify-content: center;
-
-        img {
-            width: 80vw;
-            display: flex;
-            align-content: flex-start;
+        .camara {
+            width: 100%;
             height: 100%;
-        }
+            display: inline-block;
+            justify-content: center;
+            align-content: center;
 
-        p {
-            width: 80vw;
-            display: flex;
-            align-content: flex-end;
-            font-size: 30px;
-            font-weight: 500;
+            h2 {
+                font-size: nth($font-size, 4 );
+                text-transform: uppercase;
+                color: nth($colores1, 8 );
+                padding: 15px 0 0 20px;
+            }
+
+            img {
+                width: 80vw;
+                display: flex;
+                align-content: flex-start;
+                height: 100%;
+            }
+
+            p {
+                width: 80vw;
+                display: flex;
+                align-content: flex-end;
+                font-size: nth($font-size, 3 );
+                font-weight: 500;
+            }
         }
     }
-
 }
 
 @media (max-width:600px) {
     .camara {
         p {
-            font-size: 20px;
-            font-weight: 300;
+        font-size: nth($font-size, 1 );
+        font-weight: 300;
         }
 
         img {
-            width: 300px;
-            height: 300px;
+        width: 300px;
+        height: 300px;
         }
-
     }
 }
-
 @media (max-width:400px) {
-    .camara {
-        div {
-            margin: 0;
-        }
-
-        img {
-            width: 80vw;
-            height: 250px;
+    .contenedor {
+        width: 100vw;
+        
+        .camara {
+            div {
+                width: 100%;
+                height: 100%;
+                margin: 3px;
+                h2 {
+                    padding: 0;
+                }
+                
+                img {
+                    width: 80%;
+                    height: 250px;
+                }
+                p {
+                    display: none;
+                }
+            }
+            
         }
     }
+    
 }
 
 @media (max-width:1240px) {
     .heroacerca {
         height: auto;
-    }
-
-    .descripcion {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        grid-template-areas:
-            "at-1 at-1"
-            "im-1 im-1"
-            "at-2 at-2"
-            "im-2 im-2";
-
-        img {
-            width: 90%;
-            padding-left: 40px;
+        .descripcion {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "at-1 at-1"
+                "im-1 im-1"
+                "at-2 at-2"
+                "im-2 im-2";
+                img {
+                    width: 90%;
+                    padding-left: 40px;
+                }
         }
     }
-
 }
 
 @media (max-width:400px) {
     .descripcion p {
-        font-size: medium;
+        font-size: nth($font-size, 2 );
         font-weight: 200;
     }
 }
@@ -278,7 +336,7 @@
             }
 
             .parrafo {
-                font-size: 30px;
+                font-size: nth($font-size, 3 );
                 font-weight: 500;
             }
         }
@@ -315,7 +373,7 @@
 
                 h3 {
                     font-size: 50px;
-                    color: rgb(161, 6, 6);
+                    color: nth($colores1, 9 );
                     padding: 25px;
                 }
             }
@@ -323,6 +381,8 @@
 
     }
 }
+
+
 
 /*-------Contacto------*/
 
