@@ -8,6 +8,7 @@
     background-color: #0e4f6b;
     box-sizing: border-box;
 
+
     h2 {
         color: nth($colores2, 4 );
         font-size: nth($font-size, 3 );
@@ -20,6 +21,7 @@
         @extend %sombreado;
         margin-bottom: 25px;
         object-fit: cover;
+
 
         &:hover {
             border: #63b9de solid 3px;
