@@ -427,22 +427,30 @@
             font-size: 30px;
             font-weight: 300;
         }
+        div.form {
+            grid-column: 1 / 7;
+            grid-row: 3 / 5;
+            width: 100%;
+        }
     }
 }
 
 @media (max-width:650px) {
     .formulario {
+        div.form {
+            grid-column: 1 / 7;
+            grid-row: 3 / 5;
+            width: 100%;
+        }
         div.ubicacion {
+            grid-column: 1 / 6;
+            grid-row: 5 / 7;
+            width: auto;
             .mapa {
                 width: auto;
                 height: 200px;
             }
         }
-
-        div.form {
-            width: 90vw;
-        }
-
 
     }
 }
@@ -458,19 +466,15 @@
             font-size: larger;
             font-weight: 200;
         }
-
-        .ubicacion {
-
-            display: none;
-
-
-        }
-
-        .form {
+        div.form {
             width: auto;
         }
+        div.ubicacion {
 
-
+            width: auto;
+            height: 200px;
+            margin: 5px;
+        }
 
     }
 }

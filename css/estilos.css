@@ -996,14 +996,24 @@
     font-size: 35px; }
   .formulario p {
     font-size: 30px;
-    font-weight: 300; } }
+    font-weight: 300; }
+  .formulario div.form {
+    grid-column: 1 / 7;
+    grid-row: 3 / 5;
+    width: 100%; } }
 
 @media (max-width: 650px) {
-  .formulario div.ubicacion .mapa {
-    width: auto;
-    height: 200px; }
   .formulario div.form {
-    width: 90vw; } }
+    grid-column: 1 / 7;
+    grid-row: 3 / 5;
+    width: 100%; }
+  .formulario div.ubicacion {
+    grid-column: 1 / 6;
+    grid-row: 5 / 7;
+    width: auto; }
+    .formulario div.ubicacion .mapa {
+      width: auto;
+      height: 200px; } }
 
 @media (max-width: 500px) {
   .formulario h2 {
@@ -1012,10 +1022,12 @@
   .formulario p {
     font-size: larger;
     font-weight: 200; }
-  .formulario .ubicacion {
-    display: none; }
-  .formulario .form {
-    width: auto; } }
+  .formulario div.form {
+    width: auto; }
+  .formulario div.ubicacion {
+    width: auto;
+    height: 200px;
+    margin: 5px; } }
 
 /*---------Footer----------*/
 @media (max-width: 1290px) {
