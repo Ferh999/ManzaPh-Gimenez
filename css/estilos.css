@@ -221,11 +221,12 @@
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: auto 250px; }
 
-.carrusel .carousel-item h5 {
+.carrusel .carousel-item h1 {
   font-size: 40px;
   font-weight: 500;
-  text-transform: uppercase; }
-  .carrusel .carousel-item h5 span {
+  text-transform: uppercase;
+  color: #FFFFFF; }
+  .carrusel .carousel-item h1 span {
     font-size: 50px;
     font-weight: 900;
     font-style: italic;
@@ -1011,11 +1012,12 @@
   .formulario p {
     font-size: larger;
     font-weight: 200; }
-  .formulario div .form {
-    width: auto; }
-  .formulario div .ubicacion .mapa {
+  .formulario .ubicacion {
     width: auto;
-    height: 200px; } }
+    height: 200px;
+    margin: 5px; }
+  .formulario .form {
+    width: auto; } }
 
 /*---------Footer----------*/
 @media (max-width: 1290px) {

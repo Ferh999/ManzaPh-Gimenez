@@ -82,7 +82,7 @@
             display: block;
             width: 100%;
             height: 3px;
-            background: nth($colores2, 6 );
+            background: nth($colores2, 6);
             margin-top: 12px;
             transform-origin: 0px 100%;
             transition: all 0.3s;
@@ -221,9 +221,9 @@
             align-content: center;
 
             h2 {
-                font-size: nth($font-size, 4 );
+                font-size: nth($font-size, 4);
                 text-transform: uppercase;
-                color: nth($colores1, 8 );
+                color: nth($colores1, 8);
                 padding: 15px 0 0 20px;
             }
 
@@ -238,7 +238,7 @@
                 width: 80vw;
                 display: flex;
                 align-content: flex-end;
-                font-size: nth($font-size, 3 );
+                font-size: nth($font-size, 3);
                 font-weight: 500;
             }
         }
@@ -248,46 +248,50 @@
 @media (max-width:600px) {
     .camara {
         p {
-        font-size: nth($font-size, 1 );
-        font-weight: 300;
+            font-size: nth($font-size, 1);
+            font-weight: 300;
         }
 
         img {
-        width: 300px;
-        height: 300px;
+            width: 300px;
+            height: 300px;
         }
     }
 }
+
 @media (max-width:400px) {
     .contenedor {
         width: 100vw;
-        
+
         .camara {
             div {
                 width: 100%;
                 height: 100%;
                 margin: 3px;
+
                 h2 {
                     padding: 0;
                 }
-                
+
                 img {
                     width: 80%;
                     height: 250px;
                 }
+
                 p {
                     display: none;
                 }
             }
-            
+
         }
     }
-    
+
 }
 
 @media (max-width:1240px) {
     .heroacerca {
         height: auto;
+
         .descripcion {
             grid-template-columns: 1fr 1fr;
             grid-template-rows: auto;
@@ -296,17 +300,18 @@
                 "im-1 im-1"
                 "at-2 at-2"
                 "im-2 im-2";
-                img {
-                    width: 90%;
-                    padding-left: 40px;
-                }
+
+            img {
+                width: 90%;
+                padding-left: 40px;
+            }
         }
     }
 }
 
 @media (max-width:400px) {
     .descripcion p {
-        font-size: nth($font-size, 2 );
+        font-size: nth($font-size, 2);
         font-weight: 200;
     }
 }
@@ -336,7 +341,7 @@
             }
 
             .parrafo {
-                font-size: nth($font-size, 3 );
+                font-size: nth($font-size, 3);
                 font-weight: 500;
             }
         }
@@ -373,7 +378,7 @@
 
                 h3 {
                     font-size: 50px;
-                    color: nth($colores1, 9 );
+                    color: nth($colores1, 9);
                     padding: 25px;
                 }
             }
@@ -454,18 +459,21 @@
             font-weight: 200;
         }
 
-        div .form {
+        .ubicacion {
+
+            width: auto;
+            height: 200px;
+            margin: 5px;
+
+
+        }
+
+        .form {
             width: auto;
         }
 
-        div .ubicacion {
-            .mapa {
-                width: auto;
-                height: 200px;
 
 
-            }
-        }
     }
 }
 

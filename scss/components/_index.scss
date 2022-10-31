@@ -12,10 +12,11 @@
             @include grid (grid, repeat(8, 1fr), auto 250px);
         }
 
-        h5 {
+        h1 {
             font-size: nth($font-size, 4);
             font-weight: 500;
             text-transform: uppercase;
+            color: nth($colores1, 8 );
 
             span {
                 font-size: nth($font-size, 5 );
