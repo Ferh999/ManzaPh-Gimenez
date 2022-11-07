@@ -8,7 +8,8 @@
     width: 100%;
     height: 150px;
     align-items: center;
-    background-color: nth($colores1, 10 );
+    background: rgb(34,34,37);
+    background: linear-gradient(90deg, rgba(34,34,37,1) 33%, rgba(29,44,57,1) 100%);
     grid-template-areas:
         "logo-footer copyright redes ";
 

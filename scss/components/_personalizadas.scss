@@ -9,6 +9,7 @@
     padding: 12px;
     column-gap: 12px;
     row-gap: 16px;
+    background-color: nth($colores2, 7 );
     .personItem {
         position: relative;
         .personImg {

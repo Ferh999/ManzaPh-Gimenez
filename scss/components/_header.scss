@@ -3,7 +3,8 @@
 /*------MAIN HEADER------*/
 
 .navBar {
-    background-color: nth($colores2 , 2);
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,32,48,1) 11%, rgba(0,140,168,1) 100%);
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     align-items: center;
