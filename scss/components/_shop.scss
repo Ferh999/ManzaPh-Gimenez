@@ -19,9 +19,10 @@
     }
 
     .row {
+        margin: 0 20px 0 20px;
         .col-lg-4 {
-            padding: 15px;
-
+            padding: 10px;
+            z-index: 1;
             img {
                 object-fit: cover;
                 width: 100%;
@@ -30,8 +31,8 @@
                 border-radius: 10px;
                 @extend %sombreado;
                 &:hover {
-                    width: 103%;
-                    height: 380px;
+                    width: 101%;
+                    height: 360px;
                     transition: all 0.5s ease-in-out;
                     border-radius: 40px;
                 }

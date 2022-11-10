@@ -7,27 +7,33 @@
     padding: 10px 20px 10px 20px;
     background-color: nth($colores1, 10 );
     box-sizing: border-box;
-
-
-    h2 {
-        color: nth($colores2, 4 );
-        font-size: nth($font-size, 3 );
-        font-family: 'Poppins', sans-serif;
-    }
-
-    img {
-        width: 100%;
-        height: 100vh;
-        border-radius: 20px;
-        @extend %sombreado;
-        margin-bottom: 25px;
-        object-fit: cover;
-
-
-        &:hover {
-            border: #01161ecc solid 5px;
-            transition: all 0.5s;
-
+    div {
+        z-index: 1;
+        h2 {
+            color: nth($colores2, 4 );
+            font-size: nth($font-size, 3 );
+            font-family: 'Poppins', sans-serif;
+        }
+    
+        img {
+            width: 100%;
+            height: 100vh;
+            border-radius: 20px;
+            @extend %sombreado;
+            margin-bottom: 25px;
+            object-fit: cover;
+            
+    
+    
+            &:hover {
+                border: #01161ecc solid 5px;
+                transition: all 0.5s;
+    
+            }
         }
     }
+    
+
+
+    
 }
